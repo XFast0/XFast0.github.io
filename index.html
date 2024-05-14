@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Redirect Mock</title>
+</head>
+<body>
+    <h1>OAuth Redirect Mock Page</h1>
+    <p>If you are seeing this page, the redirect URI is working!</p>
+    <script>
+        // Extract the code parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        if (code) {
+            document.write(`<p>Authorization Code: ${code}</p>`);
+        }
+    </script>
+</body>
+</html>
